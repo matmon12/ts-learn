@@ -7,7 +7,7 @@ const AppHome = (): Promise<typeof import('@/app/views/AppHome.vue')> =>
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/starter-pack/',
+    path: '/ts-learn/',
     name: 'MainLayout',
     alias: '/',
     component: MainLayout,
