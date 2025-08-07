@@ -9,6 +9,8 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { PrimeVueResolver } from 'unplugin-vue-components/resolvers'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+// import { Icon } from "@iconify/vue";
+
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -26,7 +28,7 @@ export default defineConfig({
         '@vueuse/core',
         {
           '@/app/utils/classes': ['getClasses'],
-          '@/app/utils': ['getImageUrl']
+          '@/app/utils': ['getImageUrl'],
         },
       ],
       dts: './auto-imports.d.ts',
@@ -43,6 +45,10 @@ export default defineConfig({
           // prefix: false,
         }),
         PrimeVueResolver(),
+        (componentName) => {
+          if (componentName.startsWith('Icon'))
+            return {name: componentName, from: '@iconify/vue'}
+        }
       ],
     }),
     Icons({
