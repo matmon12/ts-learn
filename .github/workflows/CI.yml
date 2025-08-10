@@ -9,6 +9,9 @@ on:
     branches:
       - main
 
+env:
+  VITE_API_KEY_FIREBASE: ${{secrets.VITE_API_KEY_FIREBASE}}
+
 jobs:
   lint:
     runs-on: ubuntu-latest

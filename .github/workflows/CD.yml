@@ -34,7 +34,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  API_KEY_FIREBASE: ${{secrets.VITE_API_KEY_FIREBASE}}
+  VITE_API_KEY_FIREBASE: ${{secrets.VITE_API_KEY_FIREBASE}}
 
 jobs:
   deploy:
