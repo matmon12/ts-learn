@@ -33,15 +33,16 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+# env:
+#   API_KEY_FIREBASE: ${{secrets.API_KEY_FIREBASE}}
+
 jobs:
   deploy:
     # Проверяет, что для запущенного вручную workflow выбрано использование артефакта
     # Проверяет, что триггеривший этот workflow запуск другого workflow завершился успешно
     if:
-      (github.event_name == 'workflow_dispatch' && inputs.use_last_successful_ci) ||
-      (github.event_name == 'workflow_run' &&
-       github.event.workflow_run.conclusion == 'success' &&
-       github.event.workflow_run.name == 'CI')
+      (github.event_name == 'workflow_dispatch' && inputs.use_last_successful_ci) || (github.event_name ==
+      'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.name == 'CI')
 
     environment:
       name: github-pages

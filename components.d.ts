@@ -15,7 +15,6 @@ declare module 'vue' {
     ICarbonPassword: typeof import('~icons/carbon/password')['default']
     IMaterialSymbolsAlternateEmailRounded: typeof import('~icons/material-symbols/alternate-email-rounded')['default']
     IMaterialSymbolsCloseRounded: typeof import('~icons/material-symbols/close-rounded')['default']
-    IMaterialSymbolsPasswordRounded: typeof import('~icons/material-symbols/password-rounded')['default']
     IMaterialSymbolsPerson: typeof import('~icons/material-symbols/person')['default']
     InputGroup: typeof import('primevue/inputgroup')['default']
     InputGroupAddon: typeof import('primevue/inputgroupaddon')['default']
@@ -23,10 +22,8 @@ declare module 'vue' {
     ISvgSpinners270Ring: typeof import('~icons/svg-spinners/270-ring')['default']
     Menubar: typeof import('primevue/menubar')['default']
     Password: typeof import('primevue/password')['default']
-    PButton: typeof import('primevue/button')['default']
     ProgressSpinner: typeof import('primevue/progressspinner')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TestVue: typeof import('./src/components/TestVue.vue')['default']
   }
 }

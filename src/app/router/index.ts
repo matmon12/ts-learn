@@ -10,7 +10,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 const MainLayout = (): RouteComponent => import('@/app/layouts/MainLayout.vue')
 const ViewHome = (): RouteComponent => import('@/app/views/ViewHome.vue')
-const ViewAuth = (): RouteComponent => import('@/app/views/ViewAuth.vue')
+const ViewAuth = (): RouteComponent => import('@/auth/views/ViewAuth.vue')
 const ViewList = (): RouteComponent => import('@/app/views/ViewList.vue')
 const ViewStatistic = (): RouteComponent => import('@/app/views/ViewStatistic.vue')
 

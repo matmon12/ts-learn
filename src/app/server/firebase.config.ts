@@ -1,7 +1,7 @@
 import { initializeApp, type FirebaseOptions } from 'firebase/app'
 
 const firebaseConfig: FirebaseOptions = {
-  apiKey: 'AIzaSyChZacyE4HGjTMQTSJjojsk_-d5vWUoK-Y',
+  apiKey: import.meta.env.API_KEY_FIREBASE,
   authDomain: 'ts-learn-ec8b7.firebaseapp.com',
   projectId: 'ts-learn-ec8b7',
   storageBucket: 'ts-learn-ec8b7.firebasestorage.app',
