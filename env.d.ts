@@ -11,3 +11,7 @@ declare module '~icons/*' {
   const icon: Component
   export default icon;
 }
+
+interface ImportMetaEnv {
+  readonly VITE_API_KEY_FIREBASE: string
+}
