@@ -8,12 +8,15 @@ export const checkAuth = (
 ): void => {
   let isAuth = false // флаг для предотвращения многократных проверок статуса авторизации
   onAuthStateChanged(getAuth(), (user) => {
-    if (user && !isAuth) {
+    if (user && to.name === 'AuthView' && !isAuth) {
       isAuth = true
-      next()
-    } else if (!user && !isAuth) {
+      next({ name: 'HomeView' })
+    } else if (!user && to.name !== 'AuthView' && !isAuth) {
       isAuth = true
       next({ name: 'AuthView' })
+    } else if (!isAuth) {
+      isAuth = true
+      next()
     }
   })
 }

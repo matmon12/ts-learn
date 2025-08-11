@@ -14,7 +14,7 @@ const routes: RouteRecordRaw[] = [
     component: MainLayout,
     children: [
       { path: '', name: 'HomeView', component: ViewHome, beforeEnter: checkAuth },
-      { path: 'auth', name: 'AuthView', component: ViewAuth },
+      { path: 'auth', name: 'AuthView', component: ViewAuth, beforeEnter: checkAuth },
       { path: 'list', name: 'ListView', component: ViewList, beforeEnter: checkAuth },
       {
         path: 'statistic',
