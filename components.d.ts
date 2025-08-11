@@ -11,6 +11,7 @@ declare module 'vue' {
     AppButton: typeof import('./src/app/components/UI/AppButton.vue')['default']
     AppFooter: typeof import('./src/app/components/core/AppFooter.vue')['default']
     AppHeader: typeof import('./src/app/components/core/AppHeader.vue')['default']
+    AuthExitButton: typeof import('./src/auth/components/AuthExitButton.vue')['default']
     Button: typeof import('primevue/button')['default']
     ICarbonPassword: typeof import('~icons/carbon/password')['default']
     IMaterialSymbolsAlternateEmailRounded: typeof import('~icons/material-symbols/alternate-email-rounded')['default']

@@ -10,3 +10,4 @@ const firebaseConfig: FirebaseOptions = {
 }
 
 export const firebaseApp = initializeApp(firebaseConfig)
+

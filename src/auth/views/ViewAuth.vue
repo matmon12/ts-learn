@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { signUp, signIn } from '@/app/server/auth'
+import { signUp, signIn } from '@/auth/services'
 import router from '@/app/router'
 import { useToast } from 'primevue/usetoast'
 

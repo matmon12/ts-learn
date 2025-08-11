@@ -10,22 +10,9 @@
 
 <script setup lang="ts">
 import Toast from 'primevue/toast'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import { useUserStore } from '@/app/stores/user'
+import { useAuthState } from '@/auth/composables/useAuthState'
 
-const userStore = useUserStore()
-const isLoading = ref<boolean>(true)
-
-onMounted(() => {
-  onAuthStateChanged(getAuth(), (user) => {
-    if (user) {
-      userStore.userId = user.uid
-    } else {
-      userStore.userId = ''
-    }
-    isLoading.value = false
-  })
-})
+const { isLoading } = useAuthState()
 </script>
 
 <style scoped lang="scss">

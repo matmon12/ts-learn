@@ -11,10 +11,7 @@
           </template>
         </template>
         <template #end>
-          <button v-if="userStore.userId" class="menubar-exit" @click="logOutUser">
-            <component :is="MaterialSymbolsLogoutRounded" class="menubar-icon" />
-            <span class="menubar-label">Выход</span>
-          </button>
+          <AuthExitButton v-if="userStore.userId" />
         </template>
       </Menubar>
     </div>
@@ -23,18 +20,13 @@
 
 <script setup lang="ts">
 import type { ComputedRef } from 'vue'
-import { useUserStore } from '@/app/stores/user'
-import { logOut } from '@/app/server/auth'
-import router from '@/app/router'
-import { useToast } from 'primevue'
+import { useUserStore } from '@/auth/stores/user'
 import MaterialSymbolsLoginRounded from '~icons/material-symbols/login-rounded?width=20px&height=20px'
-import MaterialSymbolsLogoutRounded from '~icons/material-symbols/logout-rounded?width=20px&height=20px'
 import MajesticonsPlus from '~icons/majesticons/plus?width=20px&height=20px'
 import IconParkOutlineList from '~icons/icon-park-outline/list?width=20px&height=20px'
 import AkarIconsStatisticUp from '~icons/akar-icons/statistic-up?width=20px&height=20px'
 
 const userStore = useUserStore()
-const toast = useToast()
 
 interface IMenuItem {
   label?: string
@@ -69,29 +61,10 @@ const items = ref<IMenuItem[]>([
     show: computed<boolean>(() => !!userStore.userId),
   },
 ])
-
-const logOutUser = async (): Promise<void> => {
-  try {
-    await logOut()
-
-    toast.add({ severity: 'success', summary: 'Успешно', detail: 'Вы успешно выполнили выход', life: 5000 })
-    router.push({ name: 'AuthView' })
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      toast.add({ severity: 'error', summary: 'Ошибка', detail: e.message, life: 5000 })
-    }
-  }
-}
 </script>
 
 <style scoped lang="scss">
 .header {
   padding: 15px 0;
-}
-
-.menubar-exit {
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 </style>

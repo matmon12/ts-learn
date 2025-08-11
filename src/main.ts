@@ -6,16 +6,11 @@ import { VueFire } from 'vuefire'
 
 import App from '@/app/App.vue'
 import router from '@/app/router/index'
-import directives from '@/app/directives'
 import '@/index.scss'
-import { firebaseApp } from '@/app/server/firebase.config'
+import { firebaseApp } from '@/app/firebase/firebase.config'
 import ToastService from 'primevue/toastservice'
 
 const app = createApp(App)
-
-directives.forEach((directive) => {
-  app.directive(directive.name, directive)
-})
 
 app.use(createPinia())
 app.use(router)

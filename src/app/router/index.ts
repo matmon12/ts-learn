@@ -1,31 +1,11 @@
-import {
-  createRouter,
-  createWebHistory,
-  type RouteRecordRaw,
-  type RouteComponent,
-  type RouteLocationNormalized,
-  type NavigationGuardNext,
-} from 'vue-router'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { createRouter, createWebHistory, type RouteRecordRaw, type RouteComponent } from 'vue-router'
+import { checkAuth } from '@/auth/services/index'
 
 const MainLayout = (): RouteComponent => import('@/app/layouts/MainLayout.vue')
 const ViewHome = (): RouteComponent => import('@/app/views/ViewHome.vue')
 const ViewAuth = (): RouteComponent => import('@/auth/views/ViewAuth.vue')
 const ViewList = (): RouteComponent => import('@/app/views/ViewList.vue')
 const ViewStatistic = (): RouteComponent => import('@/app/views/ViewStatistic.vue')
-
-const checkAuth = (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
-  let isAuth = false // флаг для предотвращения многократных проверок статуса авторизации
-  onAuthStateChanged(getAuth(), (user) => {
-    if (user && !isAuth) {
-      isAuth = true
-      next()
-    } else if (!user && !isAuth) {
-      isAuth = true
-      next({ name: 'AuthView' })
-    }
-  })
-}
 
 const routes: RouteRecordRaw[] = [
   {
