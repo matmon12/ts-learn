@@ -411,5 +411,15 @@ export const getClasses = (mainClass: string): PrimeVueClasses => {
       previousbutton: `${mainClass}-carousel-prev-button`,
       nextbutton: `${mainClass}-carousel-next-button`,
     },
+    card: {
+      root: `${mainClass}-card`,
+      header: `${mainClass}-card-header`,
+      body: `${mainClass}-card-body`,
+      caption: `${mainClass}-card-caption`,
+      title: `${mainClass}-card-title`,
+      subtitle: `${mainClass}-card-subtitle`,
+      content: `${mainClass}-card-content`,
+      footer: `${mainClass}-card-footer`,
+    },
   }
 }

@@ -2,10 +2,12 @@ import { createRouter, createWebHistory, type RouteRecordRaw, type RouteComponen
 import { checkAuth } from '@/auth/services/index'
 
 const MainLayout = (): RouteComponent => import('@/app/layouts/MainLayout.vue')
-const ViewHome = (): RouteComponent => import('@/app/views/ViewHome.vue')
-const ViewAuth = (): RouteComponent => import('@/auth/views/ViewAuth.vue')
-const ViewList = (): RouteComponent => import('@/app/views/ViewList.vue')
-const ViewStatistic = (): RouteComponent => import('@/app/views/ViewStatistic.vue')
+const NewInterviewView = (): RouteComponent => import('@/interview/views/NewInterviewView.vue')
+const AuthView = (): RouteComponent => import('@/auth/views/AuthView.vue')
+const ListView = (): RouteComponent => import('@/interview/views/ListView.vue')
+const StatisticView = (): RouteComponent => import('@/interview/views/StatisticView.vue')
+const InterviewView = (): RouteComponent => import('@/interview/views/InterviewView.vue')
+const NotFoundView = (): RouteComponent => import('@/app/views/NotFoundView.vue')
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,14 +15,25 @@ const routes: RouteRecordRaw[] = [
     name: 'MainLayout',
     component: MainLayout,
     children: [
-      { path: '', name: 'HomeView', component: ViewHome, beforeEnter: checkAuth },
-      { path: 'auth', name: 'AuthView', component: ViewAuth, beforeEnter: checkAuth },
-      { path: 'list', name: 'ListView', component: ViewList, beforeEnter: checkAuth },
+      { path: '', name: 'NewInterviewView', component: NewInterviewView, beforeEnter: checkAuth },
+      { path: 'auth', name: 'AuthView', component: AuthView, beforeEnter: checkAuth },
+      { path: 'list', name: 'ListView', component: ListView, beforeEnter: checkAuth },
       {
         path: 'statistic',
         name: 'StatisticView',
-        component: ViewStatistic,
+        component: StatisticView,
         beforeEnter: checkAuth,
+      },
+      {
+        path: 'interview/:interviewId',
+        name: 'InterviewView',
+        component: InterviewView,
+        beforeEnter: checkAuth,
+      },
+      {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: NotFoundView,
       },
     ],
   },

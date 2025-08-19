@@ -458,26 +458,37 @@ interface CarouselClasses {
   nextbutton?: string
 }
 
+interface Card {
+  root?: string
+  header?: string
+  body?: string
+  caption?: string
+  title?: string
+  subtitle?: string
+  content?: string
+  footer?: string
+}
+
 export interface PrimeVueClasses {
   select: SelectClasses
   button: ButtonClasses
   toolbar: ToolbarClasses
   datatable: DataTableClasses
-  column: ColumnClasses,
-  iconfield:IconFieldClasses,
-  inputicon: InputIconClasses,
-  inputtext: InputTextClasses,
-  rating: RatingClasses,
-  tag: TagClasses,
-  dialog: DialogClasses,
-  textarea: TextareaClasses,
-  radiobutton: RadioButtonClasses,
-  inputnumber: InputNumberClasses,
-  checkbox: CheckboxClasses,
-  avatar: AvatarClasses,
-  paginator: PaginatorClasses,
-  message: MessageClasses,
-  fileupload: FileUploadClasses,
+  column: ColumnClasses
+  iconfield: IconFieldClasses
+  inputicon: InputIconClasses
+  inputtext: InputTextClasses
+  rating: RatingClasses
+  tag: TagClasses
+  dialog: DialogClasses
+  textarea: TextareaClasses
+  radiobutton: RadioButtonClasses
+  inputnumber: InputNumberClasses
+  checkbox: CheckboxClasses
+  avatar: AvatarClasses
+  paginator: PaginatorClasses
+  message: MessageClasses
+  fileupload: FileUploadClasses
   image: ImageClasses
   editor: EditorClasses
   tooltip: TooltipClasses
@@ -493,4 +504,5 @@ export interface PrimeVueClasses {
   toggleswitch: ToggleSwitchClasses
   autocomplete: AutoCompleteClasses
   carousel: CarouselClasses
+  card: Card
 }

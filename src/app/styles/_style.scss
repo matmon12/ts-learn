@@ -8,11 +8,17 @@ body {
 }
 
 a {
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .container {
   max-width: 1300px;
   padding: 0 10px;
   margin: 0 auto;
+  flex-grow: 1;
+}
+
+main{
+  display: flex;
+  flex-grow: 1;
 }

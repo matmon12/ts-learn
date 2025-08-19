@@ -10,7 +10,7 @@ export const checkAuth = (
   onAuthStateChanged(getAuth(), (user) => {
     if (user && to.name === 'AuthView' && !isAuth) {
       isAuth = true
-      next({ name: 'HomeView' })
+      next({ name: 'NewInterviewView' })
     } else if (!user && to.name !== 'AuthView' && !isAuth) {
       isAuth = true
       next({ name: 'AuthView' })

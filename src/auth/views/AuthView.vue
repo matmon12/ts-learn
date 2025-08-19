@@ -71,7 +71,7 @@ const signupUser = async (): Promise<void> => {
     await signUp(email.value, password.value)
 
     toast.add({ severity: 'success', summary: 'Успешно', detail: 'Вы успешно зарегистрировались', life: 5000 })
-    router.push({ name: 'HomeView' })
+    router.push({ name: 'NewInterviewView' })
   } catch (e: unknown) {
     if (e instanceof Error) {
       toast.add({ severity: 'error', summary: 'Ошибка', detail: e.message, life: 5000 })
@@ -87,7 +87,7 @@ const signinUser = async (): Promise<void> => {
     await signIn(email.value, password.value)
 
     toast.add({ severity: 'success', summary: 'Успешно', detail: 'Вы успешно выполнили вход', life: 5000 })
-    router.push({ name: 'HomeView' })
+    router.push({ name: 'NewInterviewView' })
   } catch (e: unknown) {
     if (e instanceof Error) {
       toast.add({ severity: 'error', summary: 'Ошибка', detail: e.message, life: 5000 })

@@ -45,7 +45,7 @@ const items = ref<IMenuItem[]>([
   {
     label: 'Добавить',
     component: MajesticonsPlus,
-    path: 'HomeView',
+    path: 'NewInterviewView',
     show: computed<boolean>(() => !!userStore.userId),
   },
   {

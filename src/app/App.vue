@@ -24,4 +24,9 @@ const { isLoading } = useAuthState()
 .app-spinner {
   margin: auto;
 }
+.app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 </style>
