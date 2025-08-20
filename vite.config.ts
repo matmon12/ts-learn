@@ -12,7 +12,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.VERCEL ? '/' : '/ts-learn/',
+  base: process.env.NODE_ENV === 'production' ? '/ts-learn/' : '/',
   plugins: [
     vue(),
     checker({
