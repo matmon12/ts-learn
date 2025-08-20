@@ -1,20 +1,20 @@
-<h1 align="center">Starter Pack</h1>
+<h1 align="center">List of vacancies</h1>
 
 <div align="center" id="top">
-  <img src="./public/readme-logo.svg" alt="logo" style="max-width: 400px;" />
+  <img src="./public/logo.png" alt="logo" />
 </div>
 &#xa0;
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/matmon12/starter-pack?color=42d392">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/matmon12/ts-learn?color=42d392">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/matmon12/starter-pack?color=d36449">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/matmon12/ts-learn?color=d36449">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/matmon12/starter-pack?color=4cc71e">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/matmon12/ts-learn?color=4cc71e">
 
-  <img alt="License" src="https://img.shields.io/github/license/matmon12/starter-pack?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/matmon12/ts-learn?color=56BEB8">
 
-  <img alt="Github stars" src="https://img.shields.io/github/stars/matmon12/starter-pack?color=56BEB8" />
+  <img alt="Github stars" src="https://img.shields.io/github/stars/matmon12/ts-learn?color=56BEB8" />
 </p>
 
 <p align="center">
@@ -31,36 +31,30 @@
 
 ## :dart: About ##
 
-Starter template Vite + Vue3
+
+A learning project to gain practical skills in typescript. The project is a simple list of vacancies.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Vite 7 + Vue 3;\
-:heavy_check_mark: Vue-router;\
-:heavy_check_mark: TypeScript;\
-:heavy_check_mark: Pinia;\
-:heavy_check_mark: Components auto importing;\
-:heavy_check_mark: SCSS;\
-:heavy_check_mark: Iconify (icons as components, auto importing);\
-:heavy_check_mark: CI/CD;\
-:heavy_check_mark: Deploy on gitPages;\
-:heavy_check_mark: PrimeVue;\
-:heavy_check_mark: Eslint & prettier;\
-:heavy_check_mark: Modular architecture.
+:heavy_check_mark: Adding, deleting and editing vacancies;\
+:heavy_check_mark: Filter vacancies by results;\
+:heavy_check_mark: Table of vacancies;\
+:heavy_check_mark: Authorization;\
+:heavy_check_mark: Statistics of vacancies.
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
 - [Vue](https://vuejs.org/)
-- [VueUse](https://vueuse.org/)
 - [Pinia](https://pinia.vuejs.org/)
 - [Vite](https://vitejs.dev/)
 - [PrimeVue](https://primevue.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vue-router](https://router.vuejs.org/)
-- [Unplugin](https://unplugin.unjs.io/)
-- [SASS](https://sass-lang.com/)
+- [Chart.js](https://www.chartjs.org/)
+- [Firebase](https://firebase.google.com/)
+- [Uuid](https://www.npmjs.com/package/uuid)
 
 ## :white_check_mark: Requirements ##
 
@@ -70,10 +64,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/matmon12/starter-pack.git
+$ git clone https://github.com/matmon12/ts-learn.git
 
 # Access
-$ cd starter-pack
+$ cd ts-learn
 
 # Install dependencies
 $ npm install
